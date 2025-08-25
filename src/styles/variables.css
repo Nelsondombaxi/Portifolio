@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #0d1117;         
+  --color-bg-alt: #1f3a5f;      
+  --color-accent: #3b82f6;      
+  
+  --color-text: #e5e7eb;       
+  --color-text-muted: #9ca3af;  
+  
+  --font-pixel: 'VT323', monospace;
+  --font-body: 'Poppins', sans-serif;
+}

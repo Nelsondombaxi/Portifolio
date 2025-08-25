@@ -1,0 +1,250 @@
+.projects {
+  padding: 4rem 2rem;
+  background: #0d0d16;
+  color: #fff;
+  text-align: center;
+  overflow: clip;         
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: clip;     
+}     
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: clip;         
+}
+
+
+.project-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 360px;
+  max-width: 420px;
+  background: #151525;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  opacity: 0;
+  transition: all 0.6s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.project-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.activeSlide {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.12);
+  z-index: 3;
+}
+
+.lastSlide {
+  opacity: 0.6;
+  transform: translateX(-120%) scale(0.9);
+  z-index: 2;
+}
+
+.nextSlide {
+  opacity: 0.6;
+  transform: translateX(20%) scale(0.9);
+  z-index: 2;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #6c63ff, #8b80ff);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, #5848e5, #7268ff);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.nav-btn.left {
+  left: 2rem;
+}
+
+.nav-btn.right {
+  right: 2rem;
+}
+
+.project-info-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.project-btn.details {
+  background: linear-gradient(135deg, #6c63ff, #8b80ff);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.4);
+}
+
+.project-btn.details:hover {
+  background: linear-gradient(135deg, #5848e5, #7268ff);
+  transform: translateY(-3px);
+}
+
+/* --- Modal --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #1e1e2f;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 750px;
+  position: relative;
+  color: #fff;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.modal-extra {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #9f9f9f;
+}
+
+/* --- Links do modal --- */
+.modal-links {
+  display: flex;
+  justify-content: center; /* 👈 centralizado */
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.project-btn.github {
+  background: #24292f;
+  color: #fff;
+}
+
+.project-btn.github:hover {
+  background: #000;
+}
+
+.project-btn.deploy {
+  background: #6c63ff;
+  color: #fff;
+}
+
+.project-btn.deploy:hover {
+  background: #5848e5;
+}
+
+/* --- Animação Modal --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .project-card {
+    min-width: 90%;
+    max-width: 95%;
+  }
+
+  .nav-btn.left {
+    left: 0.5rem;
+  }
+
+  .nav-btn.right {
+    right: 0.5rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+
+html, body {
+  overflow-x: hidden; /* impede scroll horizontal */
+}
+
+.projects {
+  overflow: hidden; /* já garante que nada vaze do container */
+}
