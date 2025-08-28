@@ -7,7 +7,6 @@ function Services() {
       title: "Game & Interações Web",
       desc:
         "Crio experiências interativas inspiradas em games: animações, microinterações e elementos dinâmicos que tornam a navegação envolvente.",
-      // svg minimalista roxo
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none">
           <path d="M7 10h4M7 14h2M15.5 11.5v0M18 14v0" stroke="#8b80ff" strokeWidth="1.6" strokeLinecap="round"/>

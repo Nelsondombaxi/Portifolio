@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // 👈 icons
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "../styles/projects.css";
 import projects from "../data/projects";
 
@@ -11,7 +11,7 @@ function Projects() {
     setIndex((oldIndex) => (oldIndex + 1) % projects.length);
   };
 
-  // autoplay (a cada 5s)
+  // autoplay
   useEffect(() => {
     const slider = setInterval(() => {
       nextSlide();

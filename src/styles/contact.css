@@ -35,11 +35,12 @@
   gap: 1rem;
 }
 
+/* FORMULÁRIO - Invisível até o foco */
 .contact-form input,
 .contact-form textarea {
   padding: 0.9rem 1rem;
   border-radius: 10px;
-  border: 1px solid var(--color-muted);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* 👈 borda clarinha sempre */
   background: var(--color-card);
   color: var(--color-text);
   font-size: 1rem;
@@ -47,11 +48,13 @@
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Quando o usuário clica (destaca bem mais) */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 6px rgba(26, 115, 232, 0.3);
 }
+
 
 .contact-form button {
   padding: 0.9rem;
@@ -133,4 +136,4 @@
   .contact-info a {
     justify-content: center;
   }
-}/* --- Anti overflow global --- */
+}

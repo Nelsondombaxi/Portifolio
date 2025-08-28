@@ -57,10 +57,51 @@
   line-height: 1.6;
 }
 
-/* responsivo */
+/* Responsividade */
 @media (max-width: 980px) {
   .services-grid { grid-template-columns: 1fr 1fr; }
 }
+
 @media (max-width: 640px) {
   .services-grid { grid-template-columns: 1fr; }
+  
+  .services-title {
+    font-size: 2.2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+
+  .service-icon {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 420px) {
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .service-card {
+    padding: 1.2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }

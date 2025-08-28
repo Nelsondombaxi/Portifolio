@@ -174,10 +174,9 @@
   color: #9f9f9f;
 }
 
-/* --- Links do modal --- */
 .modal-links {
   display: flex;
-  justify-content: center; /* 👈 centralizado */
+  justify-content: center;
   gap: 1.2rem;
   flex-wrap: wrap;
 }
@@ -222,29 +221,39 @@
 }
 
 /* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .carousel-track { height: 460px; }
+}
+
 @media (max-width: 768px) {
   .project-card {
-    min-width: 90%;
-    max-width: 95%;
+    min-width: 85%;
+    max-width: 90%;
   }
 
-  .nav-btn.left {
-    left: 0.5rem;
+  .carousel-track { height: 420px; }
+
+  .nav-btn.left { left: 0.5rem; }
+  .nav-btn.right { right: 0.5rem; }
+
+  .modal-content { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    min-width: 95%;
+    max-width: 100%;
   }
 
-  .nav-btn.right {
-    right: 0.5rem;
-  }
+  .carousel-track { height: 380px; }
+
+  .project-image { height: 180px; }
 
   .modal-content {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 16px;
   }
-}
 
-html, body {
-  overflow-x: hidden; /* impede scroll horizontal */
-}
-
-.projects {
-  overflow: hidden; /* já garante que nada vaze do container */
+  .modal-description { font-size: 1rem; }
+  .modal-extra { font-size: 0.9rem; }
 }
